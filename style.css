@@ -1,0 +1,94 @@
+/* Keyframe Animation */
+
+/* Jello */
+div {
+  width: 200px;
+  height: 200px;
+
+  background: red;
+
+  animation: swing 2s 1s infinite;
+}
+
+/* Rotation */
+/* First Frame */
+.rotate {
+  background: blanchedalmond;
+
+  transform: scale(1) rotate(0);
+}
+
+/* Last Frame */
+.rotate:hover {
+  background: yellow;
+
+  animation-name: bigTurn;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+}
+
+/* Reusable (function) Animation */
+@keyframes bigTurn {
+  0% {
+    transform: scale(1) rotate(0);
+  }
+
+  50% {
+    opacity: 0.5;
+  }
+
+  100% {
+    transform: scale(10) rotate(45deg);
+    opacity: 0;
+  }
+
+  /*  End of Animation  */
+}
+
+/* TransFORM and TransLATION */
+
+/* Part 2 */
+/* First Frame */
+h1 {
+  letter-spacing: -2px;
+  transition: letter-spacing 2s 0.25s, transform 2s 0.25s;
+}
+
+/* Last Frame */
+h1:active {
+  color: cyan;
+  letter-spacing: 2px;
+  /*   transform: translateY(-25px); */
+}
+
+/* Part 1 */
+/* First Frame */
+.circle {
+  background: purple;
+  width: 100px;
+  height: 100px;
+  transform: scale(1);
+
+  /* Transition */
+  transition: 1s;
+}
+
+/* Last Frame */
+.circle:hover {
+  background: cyan;
+  transform: scale(2);
+  border-radius: 200px;
+
+  /* Transition */
+  transition: transform 2s, border-radius 3s, background 2s;
+}
+
+/* Middle Page */
+body {
+  background: tan;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
